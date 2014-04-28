@@ -171,20 +171,20 @@ public class LoginActivity extends ActionBarActivity {
                 SharedPreferences.Editor prefsEditor = mPrefs.edit();
                 prefsEditor.putString("User", result.toJson());
                 prefsEditor.commit();
-                Gson gson = new Gson();
-                String json = mPrefs.getString("User", "");
-                User theUser = gson.fromJson(json, User.class);
 
-                System.out.println(theUser.getToken());
+
 
             } catch (RestClientException e) {
                 System.out.println(e);
                 return false;
             }
 
-//            Gson gson = new Gson();
-//            String json = mPrefs.getString("MyObject", "");
-//            MyObject obj = gson.fromJson(json, MyObject.class);
+            /*
+                Code to get the object form SharedPreferences
+                Gson gson = new Gson();
+                String json = mPrefs.getString("User", "");
+                User theUser = gson.fromJson(json, User.class);
+             */
 
             // TODO: register the new account here.
             return true;
