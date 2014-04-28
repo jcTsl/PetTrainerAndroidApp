@@ -20,6 +20,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.google.gson.Gson;
 import com.jj.pettrainer.R;
+import com.jj.pettrainer.gui.Generic.Global;
+import com.jj.pettrainer.gui.Models.User;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;

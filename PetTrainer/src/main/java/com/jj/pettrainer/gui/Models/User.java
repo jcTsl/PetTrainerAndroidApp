@@ -1,4 +1,4 @@
-package com.jj.pettrainer.gui;
+package com.jj.pettrainer.gui.Models;
 
 import com.google.gson.Gson;
 

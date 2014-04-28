@@ -1,4 +1,4 @@
-package com.jj.pettrainer.gui;
+package com.jj.pettrainer.gui.Generic;
 
 /**
  * Created by JCCP on 4/28/14.
