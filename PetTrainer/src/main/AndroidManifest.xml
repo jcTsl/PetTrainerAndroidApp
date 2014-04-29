@@ -31,15 +31,35 @@
         </activity>
         <activity
             android:name="com.jj.pettrainer.gui.PetProfileActivity"
-            android:label="@string/title_activity_pet_profile" >
+            android:label="@string/title_activity_pet_profile"
+            android:parentActivityName="com.jj.pettrainer.gui.PetListActivity" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="PetListActivity" />
         </activity>
         <activity
             android:name="com.jj.pettrainer.gui.UserProfileActivity"
-            android:label="@string/title_activity_user_profile" >
+            android:label="@string/title_activity_user_profile"
+            android:parentActivityName="com.jj.pettrainer.gui.PetListActivity" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="PetListActivity" />
         </activity>
         <activity
             android:name="com.jj.pettrainer.gui.PetAddActivity"
-            android:label="@string/title_activity_pet_add" >
+            android:label="@string/title_activity_pet_add"
+            android:parentActivityName="com.jj.pettrainer.gui.PetListActivity" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="PetListActivity" />
+        </activity>
+        <activity
+            android:name="com.jj.pettrainer.gui.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="com.jj.pettrainer.gui.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="LoginActivity" />
         </activity>
     </application>
 

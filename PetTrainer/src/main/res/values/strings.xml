@@ -30,4 +30,8 @@
     <string name="title_activity_pet_add">PetAddActivity</string>
     <string name="enter_pet_name">Pet\'s Name</string>
     <string name="pet_add_btn_label">Add Pet</string>
+    <string name="action_register">Register</string>
+    <string name="title_activity_register">Register</string>
+    <string name="user_password_label">Password:</string>
+
 </resources>

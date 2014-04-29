@@ -22,11 +22,12 @@ public class User {
         this.token = token;
     }
 
-    public User(String username, String first_name, String last_name, String email) {
+    public User(String username, String first_name, String last_name, String email, String password) {
         this.username = username;
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
+        this.password = password;
     }
 
     public User(String username, String password) {
