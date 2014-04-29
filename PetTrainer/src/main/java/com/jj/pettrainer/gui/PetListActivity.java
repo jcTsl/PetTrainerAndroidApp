@@ -74,9 +74,9 @@ public class PetListActivity extends ActionBarActivity {
                         // ListView Clicked item value
                         Pet pet = (Pet) listView.getItemAtPosition(position);
 
-//                        Intent goToPetProfileActivity = new Intent(getApplicationContext(), PetProfileActivity.class);
-//                        goToPetProfileActivity.putExtra("PET_ID", pet.getId());
-//                        startActivity(goToPetProfileActivity);
+                        Intent goToPetProfileActivity = new Intent(getApplicationContext(), PetProfileActivity.class);
+                        goToPetProfileActivity.putExtra("PET_ID", pet.getId());
+                        startActivity(goToPetProfileActivity);
 
                     }
 

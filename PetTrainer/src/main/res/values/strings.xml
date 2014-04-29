@@ -15,5 +15,7 @@
     <string name="error_field_required">field is required</string>
     <string name="error_incorrect_password">Incorrect Password</string>
     <string name="title_activity_pet_list">Pet List</string>
+    <string name="title_activity_pet_profile">PetProfileActivity</string>
+    <string name="pet_title">Pet Title</string>
 
 </resources>
