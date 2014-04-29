@@ -10,7 +10,7 @@ public class Global {
     public static String API_LOGIN_URL = "http://pettrainer.fau.jh.gg/api/login/";
     public static String API_GET_PETS_URL = "http://pettrainer.fau.jh.gg/api/pets/";
     public static String API_GET_PET_PROFILE = "http://pettrainer.fau.jh.gg/api/pets/";
-
+    public static String API_GET_USER_PROFILE = "http://pettrainer.fau.jh.gg/api/users/";
     public static final String PREFS_NAME = "PetPrefsFile";
     public static SharedPreferences prefs;
 

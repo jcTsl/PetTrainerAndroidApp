@@ -26,5 +26,6 @@
     <string name="user_first_name_label">First Name: </string>
     <string name="user_last_name_label">Last Name: </string>
     <string name="user_email_label">Email: </string>
+    <string name="user_logout_btn">Log Out</string>
 
 </resources>
