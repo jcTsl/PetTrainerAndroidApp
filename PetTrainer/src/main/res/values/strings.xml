@@ -15,11 +15,11 @@
     <string name="error_field_required">field is required</string>
     <string name="error_incorrect_password">Incorrect Password</string>
     <string name="title_activity_pet_list">Pet List</string>
-    <string name="title_activity_pet_profile">PetProfileActivity</string>
+    <string name="title_activity_pet_profile">Pet Profile</string>
     <string name="pet_title">Pet Title</string>
     <string name="action_add_pet">Add Pet</string>
     <string name="action_show_profile">User Profile</string>
-    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="title_activity_user_profile">User Profile</string>
     <string name="user_username">Username: </string>
     <string name="user_first_name">First Name: </string>
     <string name="user_username_label">Username: </string>
@@ -29,6 +29,5 @@
     <string name="user_logout_btn">Log Out</string>
     <string name="title_activity_pet_add">PetAddActivity</string>
     <string name="enter_pet_name">Pet\'s Name</string>
-    <string name="pet_add_btn_label">Add Pet Button</string>
-
+    <string name="pet_add_btn_label">Add Pet</string>
 </resources>

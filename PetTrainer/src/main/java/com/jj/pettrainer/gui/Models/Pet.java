@@ -5,7 +5,7 @@ package com.jj.pettrainer.gui.Models;
  */
 public class Pet {
 
-    private int owner;
+    private User owner;
     private int id;
     private String title;
     private String url;
@@ -19,7 +19,7 @@ public class Pet {
         this.title = title;
     }
 
-    public Pet(int owner, int id, String title, String url, String share_code) {
+    public Pet(User owner, int id, String title, String url, String share_code) {
         this.owner = owner;
         this.id = id;
         this.title = title;
@@ -27,12 +27,8 @@ public class Pet {
         this.share_code = share_code;
     }
 
-    public int getOwner() {
+    public User getOwner() {
         return owner;
-    }
-
-    public void setOwner(int owner) {
-        this.owner = owner;
     }
 
     public int getId() {

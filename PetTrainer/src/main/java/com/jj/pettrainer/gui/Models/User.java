@@ -13,6 +13,7 @@ public class User {
     private String last_name;
     private String email;
     private String token;
+    private int id;
 
     public User() {
     }
@@ -46,7 +47,7 @@ public class User {
         this.username = username;
     }
 
-    public String getFirst_name() {
+    public String getFirstName() {
         return first_name;
     }
 
@@ -54,7 +55,7 @@ public class User {
         this.first_name = first_name;
     }
 
-    public String getLast_name() {
+    public String getLastName() {
         return last_name;
     }
 
@@ -74,15 +75,6 @@ public class User {
         return token;
     }
 
-    public void setToken(String token) {
-        this.token = token;
-    }
+    public int getId() { return id; }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

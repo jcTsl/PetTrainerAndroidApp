@@ -8,14 +8,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import com.google.gson.Gson;
 import com.jj.pettrainer.R;
 import com.jj.pettrainer.gui.Generic.Global;
-import com.jj.pettrainer.gui.Models.Pet;
 import com.jj.pettrainer.gui.Models.User;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -41,8 +38,6 @@ public class UserProfileActivity extends ActionBarActivity {
         String json = mPrefs.getString("User", "");
         user = gson.fromJson(json, User.class);
 
-        final UserProfileActivity that = this;
-
         getUserProfile = new GetUserProfileTask() {
             @Override
             protected void onPostExecute(User user) {
@@ -53,15 +48,15 @@ public class UserProfileActivity extends ActionBarActivity {
                 TextView UserEmailTextView = (TextView) findViewById(R.id.user_email);
 
                 UserUsernameTextView.setText(user.getUsername());
-                UserFirstNameTextView.setText(user.getFirst_name());
-                UserLastNameTextView.setText(user.getLast_name());
+                UserFirstNameTextView.setText(user.getFirstName());
+                UserLastNameTextView.setText(user.getLastName());
                 UserEmailTextView.setText(user.getEmail());
 
             }
 
         };
 
-//        getUserProfile.execute((Void) null);
+        getUserProfile.execute((Void) null);
 
         Button logOutBtn = (Button) findViewById(R.id.user_logout_btn);
 
@@ -91,8 +86,10 @@ public class UserProfileActivity extends ActionBarActivity {
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new GsonHttpMessageConverter());
                 HttpHeaders headers = new HttpHeaders();
+
                 headers.set("Authorization", "Token " + user.getToken());
-                ResponseEntity<User> response = restTemplate.exchange(Global.API_GET_USER_PROFILE, HttpMethod.GET, new HttpEntity<Object>(headers), User.class);
+                ResponseEntity<User> response = restTemplate.exchange(Global.API_GET_USER_PROFILE + user.getId(),
+                        HttpMethod.GET, new HttpEntity<Object>(headers), User.class);
 
                 return response.getBody();
 
