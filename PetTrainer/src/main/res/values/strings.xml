@@ -30,4 +30,7 @@
     <string name="title_activity_pet_add">PetAddActivity</string>
     <string name="enter_pet_name">Pet\'s Name</string>
     <string name="pet_add_btn_label">Add Pet</string>
+    <string name="pet_task_title">Tasks</string>
+    <string name="title_activity_task_profile">TaskProfileActivity</string>
+
 </resources>

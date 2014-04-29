@@ -10,11 +10,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import com.google.gson.Gson;
 import com.jj.pettrainer.R;
 import com.jj.pettrainer.gui.Generic.Global;
 import com.jj.pettrainer.gui.Models.Pet;
+import com.jj.pettrainer.gui.Models.Task;
 import com.jj.pettrainer.gui.Models.User;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -28,6 +30,7 @@ public class PetProfileActivity extends ActionBarActivity {
 
     private User user = new User();
     private GetPetProfileTask getPet = null;
+    private GetPetTasksTask getPetTasks = null;
     int pet_id;
 
     @Override
@@ -39,6 +42,8 @@ public class PetProfileActivity extends ActionBarActivity {
         if (extras != null) {
             pet_id = extras.getInt("PET_ID");
         }
+
+        final ListView petTasklistView = (ListView) findViewById(R.id.petTaskListView);
 
         //Get the user info form shared storage and set to user.
         SharedPreferences mPrefs = getSharedPreferences(Global.PREFS_NAME, MODE_PRIVATE);
@@ -58,6 +63,38 @@ public class PetProfileActivity extends ActionBarActivity {
 
         getPet.execute((Void) null);
 
+
+        final PetProfileActivity that = this;
+
+
+        getPetTasks = new GetPetTasksTask() {
+            @Override
+            protected void onPostExecute(Task[] tasks) {
+                ArrayAdapter<Task> adapter = new ArrayAdapter<Task>(that, android.R.layout.simple_list_item_1, tasks);
+                petTasklistView.setAdapter(adapter);
+
+                petTasklistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        int itemPosition = position;
+
+                        Task task = (Task) petTasklistView.getItemAtPosition(position);
+
+                        Intent goToTaskProfileActivity = new Intent(getApplicationContext(), TaskProfileActivity.class);
+                        goToTaskProfileActivity.putExtra("TASK_ID", task.getId());
+                        goToTaskProfileActivity.putExtra("PET_ID", task.getPet());
+                        startActivity(goToTaskProfileActivity);
+
+                    }
+                });
+
+            }
+
+        };
+
+        getPetTasks.execute((Void) null);
+
     }
 
     public class GetPetProfileTask extends AsyncTask<Void, Void, Pet> {
@@ -72,6 +109,30 @@ public class PetProfileActivity extends ActionBarActivity {
                 HttpHeaders headers = new HttpHeaders();
                 headers.set("Authorization", "Token " + user.getToken());
                 ResponseEntity<Pet> response = restTemplate.exchange(Global.API_GET_PET_PROFILE + pet_id, HttpMethod.GET, new HttpEntity<Object>(headers), Pet.class);
+
+                System.out.println(response.getBody());
+
+                return response.getBody();
+
+            } catch (RestClientException e) {
+                System.out.println(e);
+                return null;
+            }
+        }
+
+    }
+
+    public class GetPetTasksTask extends AsyncTask<Void, Void, Task[]> {
+        @Override
+        protected Task[] doInBackground(Void... params) {
+            try {
+
+                RestTemplate restTemplate = new RestTemplate();
+                restTemplate.getMessageConverters().add(new GsonHttpMessageConverter());
+                HttpHeaders headers = new HttpHeaders();
+                headers.set("Authorization", "Token " + user.getToken());
+                ResponseEntity<Task[]> response = restTemplate.exchange(Global.getTaskUrl(pet_id), HttpMethod.GET, new HttpEntity<Object>(headers), Task[].class);
+                System.out.println(response.getBody());
 
                 return response.getBody();
 
