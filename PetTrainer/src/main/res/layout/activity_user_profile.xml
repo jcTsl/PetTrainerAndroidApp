@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/userProfileTable"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent" android:baselineAligned="false">
+
+    <!-- 2 columns -->
+    <TableRow
+            android:id="@+id/tableRowUsername"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+        <TextView
+                android:id="@+id/user_username_label"
+                android:text="@string/user_username_label"
+                android:textSize="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_column="1" android:layout_width="match_parent"/>
+
+        <TextView
+                android:id="@+id/user_username"
+                android:text="@string/user_username"
+                android:layout_span="1"
+                android:textSize="25dp"
+                android:layout_column="6"/>
+
+
+    </TableRow>
+
+    <!-- 2 columns -->
+    <TableRow
+            android:id="@+id/tableRowFirstname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+        <TextView
+                android:id="@+id/user_first_name_label"
+                android:layout_span="0"
+                android:text="@string/user_first_name_label"
+                android:textSize="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_column="1" android:layout_width="match_parent"/>
+
+        <TextView
+                android:id="@+id/user_first_name"
+                android:text="@string/user_first_name_label"
+                android:layout_span="1"
+                android:textSize="25dp"
+                android:layout_column="6"/>
+
+
+    </TableRow>
+
+    <!-- 2 columns -->
+    <TableRow
+            android:id="@+id/tableRowLastname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+        <TextView
+                android:id="@+id/user_last_name_label"
+                android:layout_span="0"
+                android:text="@string/user_last_name_label"
+                android:textSize="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_column="1" android:layout_width="match_parent"/>
+
+        <TextView
+                android:id="@+id/user_last_name"
+                android:text="@string/user_last_name_label"
+                android:layout_span="1"
+                android:textSize="25dp"
+                android:layout_column="6"/>
+
+
+    </TableRow>
+
+    <!-- 2 columns -->
+    <TableRow
+            android:id="@+id/tableRowEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+        <TextView
+                android:layout_span="0"
+                android:text="@string/user_email_label"
+                android:textSize="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_column="1" android:layout_width="match_parent"/>
+
+        <TextView
+                android:id="@+id/user_email"
+                android:text="@string/user_username"
+                android:layout_span="1"
+                android:textSize="25dp"
+                android:layout_column="6"/>
+
+
+    </TableRow>
+
+
+</TableLayout>

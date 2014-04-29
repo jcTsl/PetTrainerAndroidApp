@@ -17,5 +17,14 @@
     <string name="title_activity_pet_list">Pet List</string>
     <string name="title_activity_pet_profile">PetProfileActivity</string>
     <string name="pet_title">Pet Title</string>
+    <string name="action_add_pet">Add Pet</string>
+    <string name="action_show_profile">User Profile</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="user_username">Username: </string>
+    <string name="user_first_name">First Name: </string>
+    <string name="user_username_label">Username: </string>
+    <string name="user_first_name_label">First Name: </string>
+    <string name="user_last_name_label">Last Name: </string>
+    <string name="user_email_label">Email: </string>
 
 </resources>
