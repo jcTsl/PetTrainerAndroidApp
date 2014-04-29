@@ -3,6 +3,7 @@ package com.jj.pettrainer.gui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -166,13 +167,14 @@ public class LoginActivity extends ActionBarActivity {
                 User result = restTemplate.postForObject(Global.API_LOGIN_URL, new LoginCredentials(this.mUsername, this.mPassword),
                         User.class);
 
-                SharedPreferences mPrefs = getPreferences(MODE_PRIVATE);
+                SharedPreferences mPrefs = getSharedPreferences(Global.PREFS_NAME, MODE_PRIVATE);
 
                 SharedPreferences.Editor prefsEditor = mPrefs.edit();
                 prefsEditor.putString("User", result.toJson());
                 prefsEditor.commit();
 
-
+                Intent goToPetListActivity = new Intent(getApplicationContext(), PetListActivity.class);
+                startActivity(goToPetListActivity);
 
             } catch (RestClientException e) {
                 System.out.println(e);
@@ -208,10 +210,6 @@ public class LoginActivity extends ActionBarActivity {
             mAuthTask = null;
             showProgress(false);
         }
-    }
-
-    class LoginTokenContainer {
-        String token;
     }
 
     class LoginCredentials {
