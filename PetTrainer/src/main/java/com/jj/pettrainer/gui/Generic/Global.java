@@ -11,6 +11,7 @@ public class Global {
     public static String API_GET_PETS_URL = "http://pettrainer.fau.jh.gg/api/pets/";
     public static String API_GET_PET_PROFILE = "http://pettrainer.fau.jh.gg/api/pets/";
     public static String API_GET_USER_PROFILE = "http://pettrainer.fau.jh.gg/api/users/";
+    public static String API_REGISTER = "http://pettrainer.fau.jh.gg/api/users/";
     public static String API_ADD_PET = "http://pettrainer.fau.jh.gg/api/pets/";
     public static String API_GET_TASKS = "http://pettrainer.fau.jh.gg/api/pets/%s/tasks/";
     public static final String PREFS_NAME = "PetPrefsFile";
