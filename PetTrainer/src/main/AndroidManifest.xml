@@ -37,6 +37,10 @@
             android:name="com.jj.pettrainer.gui.UserProfileActivity"
             android:label="@string/title_activity_user_profile" >
         </activity>
+        <activity
+            android:name="com.jj.pettrainer.gui.PetAddActivity"
+            android:label="@string/title_activity_pet_add" >
+        </activity>
     </application>
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->

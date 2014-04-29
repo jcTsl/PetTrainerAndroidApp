@@ -15,6 +15,10 @@ public class Pet {
     public Pet() {
     }
 
+    public Pet(String title) {
+        this.title = title;
+    }
+
     public Pet(int owner, int id, String title, String url, String share_code) {
         this.owner = owner;
         this.id = id;

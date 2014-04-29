@@ -171,7 +171,8 @@ public class PetListActivity extends ActionBarActivity {
 
         switch (id) {
             case R.id.action_add_pet:
-
+                Intent goToPetAddActivity = new Intent(getApplicationContext(), PetAddActivity.class);
+                startActivity(goToPetAddActivity);
                 break;
             case R.id.action_show_profile:
 

@@ -27,5 +27,8 @@
     <string name="user_last_name_label">Last Name: </string>
     <string name="user_email_label">Email: </string>
     <string name="user_logout_btn">Log Out</string>
+    <string name="title_activity_pet_add">PetAddActivity</string>
+    <string name="enter_pet_name">Pet\'s Name</string>
+    <string name="pet_add_btn_label">Add Pet Button</string>
 
 </resources>
