@@ -17,10 +17,15 @@ public class Global {
     public static final String PREFS_NAME = "PetPrefsFile";
     public static SharedPreferences prefs;
 
+    /**
+     * Function to generate the url for the pet by ID
+     *
+     * @param id
+     * @return string
+     */
     public static String getTaskUrl(int id) {
         return Global.API_GET_PETS_URL + id + "/tasks/";
     }
-
 
 
 }

@@ -37,7 +37,7 @@ public class RegisterActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.register, menu);
         return true;
@@ -66,7 +66,7 @@ public class RegisterActivity extends ActionBarActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_register, container, false);
 
             Button registerButton = (Button) rootView.findViewById(R.id.register_button);
@@ -101,6 +101,9 @@ public class RegisterActivity extends ActionBarActivity {
         }
     }
 
+    /**
+     * AsyncTask to submit register data to the API Server.
+     */
     public class UserRegisterTask extends AsyncTask<Void, Void, Boolean> {
         private final User user;
 

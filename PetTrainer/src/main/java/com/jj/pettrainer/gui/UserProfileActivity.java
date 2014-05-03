@@ -75,7 +75,9 @@ public class UserProfileActivity extends ActionBarActivity {
 
     }
 
-
+    /**
+     * Performs the async task of getting a users profile from the API server.
+     */
     public class GetUserProfileTask extends AsyncTask<Void, Void, User> {
 
         @Override

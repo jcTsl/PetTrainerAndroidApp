@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jj.pettrainer"
-    android:versionCode="1"
-    android:versionName="1.0" >
+          package="com.jj.pettrainer"
+          android:versionCode="1"
+          android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="19" />
+            android:minSdkVersion="9"
+            android:targetSdkVersion="19"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
         <activity
-            android:name="com.jj.pettrainer.gui.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+                android:name="com.jj.pettrainer.gui.LoginActivity"
+                android:label="@string/title_activity_login"
+                android:windowSoftInputMode="adjustResize|stateVisible">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jj.pettrainer.gui.PetListActivity"
-            android:label="@string/title_activity_pet_list" >
+                android:name="com.jj.pettrainer.gui.PetListActivity"
+                android:label="@string/title_activity_pet_list">
         </activity>
         <activity
-            android:name="com.jj.pettrainer.gui.PetProfileActivity"
-            android:label="@string/title_activity_pet_profile"
-            android:parentActivityName="com.jj.pettrainer.gui.PetListActivity" >
+                android:name="com.jj.pettrainer.gui.PetProfileActivity"
+                android:label="@string/title_activity_pet_profile"
+                android:parentActivityName="com.jj.pettrainer.gui.PetListActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="PetListActivity" />
+                    android:value="PetListActivity"/>
         </activity>
         <activity
-            android:name="com.jj.pettrainer.gui.UserProfileActivity"
-            android:label="@string/title_activity_user_profile"
-            android:parentActivityName="com.jj.pettrainer.gui.PetListActivity" >
+                android:name="com.jj.pettrainer.gui.UserProfileActivity"
+                android:label="@string/title_activity_user_profile"
+                android:parentActivityName="com.jj.pettrainer.gui.PetListActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="PetListActivity" />
+                    android:value="PetListActivity"/>
         </activity>
         <activity
-            android:name="com.jj.pettrainer.gui.PetAddActivity"
-            android:label="@string/title_activity_pet_add"
-            android:parentActivityName="com.jj.pettrainer.gui.PetListActivity" >
+                android:name="com.jj.pettrainer.gui.PetAddActivity"
+                android:label="@string/title_activity_pet_add"
+                android:parentActivityName="com.jj.pettrainer.gui.PetListActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="PetListActivity" />
+                    android:value="PetListActivity"/>
         </activity>
         <activity
-            android:name="com.jj.pettrainer.gui.RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:parentActivityName="com.jj.pettrainer.gui.LoginActivity" >
+                android:name="com.jj.pettrainer.gui.RegisterActivity"
+                android:label="@string/title_activity_register"
+                android:parentActivityName="com.jj.pettrainer.gui.LoginActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="LoginActivity" />
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="LoginActivity"/>
         </activity>
         <activity
-            android:name="com.jj.pettrainer.gui.TaskProfileActivity"
-            android:label="@string/title_activity_task_profile" >
+                android:name="com.jj.pettrainer.gui.TaskProfileActivity"
+                android:label="@string/title_activity_task_profile">
         </activity>
     </application>
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
 </manifest>

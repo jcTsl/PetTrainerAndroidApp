@@ -75,7 +75,9 @@ public class LoginActivity extends ActionBarActivity {
         mProgressView = findViewById(R.id.login_progress);
     }
 
-
+    /**
+     * Validates data from the login form, calles function to submit the data to the server,
+     */
     private void attemptLogin() {
 
 //        Reset errors.
@@ -153,7 +155,7 @@ public class LoginActivity extends ActionBarActivity {
     }
 
     /**
-     * Represents an asynchronous login/registration task used to authenticate
+     * Represents an asynchronous login task used to authenticate
      * the user.
      */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {

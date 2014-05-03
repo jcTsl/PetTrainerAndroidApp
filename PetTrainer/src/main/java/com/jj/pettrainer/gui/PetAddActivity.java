@@ -57,6 +57,9 @@ public class PetAddActivity extends ActionBarActivity {
 
     }
 
+    /**
+     * Perform async task of sending new pet data to the API server to create a new pet.
+     */
     public class SavePetTask extends AsyncTask<Void, Void, Boolean> {
         @Override
         protected Boolean doInBackground(Void... params) {

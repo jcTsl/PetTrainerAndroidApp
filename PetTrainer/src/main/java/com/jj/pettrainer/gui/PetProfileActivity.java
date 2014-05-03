@@ -97,6 +97,9 @@ public class PetProfileActivity extends ActionBarActivity {
 
     }
 
+    /**
+     * Perform the async task of getting all the pets profile from the API servers
+     */
     public class GetPetProfileTask extends AsyncTask<Void, Void, Pet> {
 
         @Override

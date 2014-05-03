@@ -29,6 +29,16 @@ public class TaskProfileActivity extends ActionBarActivity {
     int pet_id;
     private GetTaskProfileTask getTask;
 
+    /**
+     * Function is called when the activity is activated. This function calls the view for the activity,
+     * gets the params that where pushed to from last activity, get the user object from shared preferences, and
+     * makes the calls to the function that calls the API endpoints to get data.
+     *
+     * @param savedInstanceState
+     *
+     * @precondition the activity must be called from another activity
+     * @postcondition the view is changed and new data is loaded.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +80,13 @@ public class TaskProfileActivity extends ActionBarActivity {
 
     }
 
-
+    /**
+     * Function makes a call to the API endpoint passing the token header to get the pets Tasks Profile
+     * It extends the AsyncTask class so the the call runs in a different thread not the main thread.
+     *
+     * @precondition Pet_ID must be in memory
+     * @postcondition onPostExecute is called to display the task's information on the screen.
+     */
     public class GetTaskProfileTask extends AsyncTask<Void, Void, Task> {
 
         @Override

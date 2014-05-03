@@ -76,6 +76,8 @@ public class User {
         return token;
     }
 
-    public int getId() { return id; }
+    public int getId() {
+        return id;
+    }
 
 }
